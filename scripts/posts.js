@@ -80,6 +80,7 @@ class Post {
 }
 
 function postTemplate(post) {
+    const date = new Date(Date.parse(post.createdAt));
     const template = `
     <div class="card">
         <div class="card-content">
@@ -95,14 +96,13 @@ function postTemplate(post) {
             <button id="${post.id}">Like</button>
            
             </br>
-            <time datetime="2016-1-1">${post.createdAt}</time>
+            <time datetime="2016-1-1">${date.toLocaleDateString()}</time>
             </div>
         </div>
     </div>
     `
    return template
 }
-
 
 
 let allposts = new Posts()
