@@ -1,26 +1,44 @@
 /* Posts Page CSS */
 .navbar {
-    background-color: #AAB8C2;;
+    background-color: white;
     padding: 10px;
 }
 
 
 body {
-    background-color: #AAB8C2;
+    background-color: rgb(201, 215, 226);
 }
 
-.navbar {
-    background-color: #AAB8C2;;
-    padding: 10px;
-}
 
 .card {
-    background-color: #F5F8FA;
+
     margin: 30px  200px;
+    background:white;
+    border-style: solid;
+    border-width: 2px;
+    height: auto;
+    border-color:rgb(4, 4, 4) ;
+    border-radius: 0.2rem;
+    text-indent:  12px;
+    text-align: center;
+    padding-bottom: 30px;
+ 
+    
 }
 
+.subtitle.is-6{
+    color: #1DA1F2; 
+    letter-spacing: normal;
+    font-weight: bolder ;
+    font-size: 20px;
+}
+p{ 
+    font-size: 20px;
+    margin: 0 20px;
+}
 .button {
     background-color: #1DA1F2;
+   
 }
 
 a:link { text-decoration: none; }

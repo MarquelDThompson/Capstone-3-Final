@@ -15,17 +15,21 @@ class Posts {
         }
         })
         .then(response => response.json())
-        .then(result => {result.forEach(post => this.posts.push(new Post( post._id , post.text , post.username , post.createdAt , post.likes)))})
+        .then(result =>
+             {
+                result.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                
+                result.forEach(post => this.posts.push(new Post( post._id , post.text , post.username , post.createdAt , post.likes)))      
+        })
         .then(result => this.displayPosts())
         .catch(error => console.log("error", error));
     }
 
     displayPosts(mypost) {
         document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
-        result.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        
          this.posts.map(post => {
             let currentpost = document.getElementById(post.id)
-            console.log(post)
             currentpost.addEventListener("click" , function() {post.like()})
         })
     }
@@ -90,7 +94,7 @@ function postTemplate(post) {
             </div>
 
             <div class="content">
-            <p>${post.text} - ${post.id}</p>
+            <p>${post.text}</p>
             <br>
             <button id="${post.id}">Like</button>
            
