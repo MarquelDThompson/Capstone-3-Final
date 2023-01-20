@@ -84,13 +84,9 @@ class Post {
 }
 
 function postTemplate(post) {
-<<<<<<< HEAD
-    const date = new Date(Date.parse(post.createdAt));
-=======
 
     const date = new Date(post.createdAt)
 
->>>>>>> 119c96a26afa1db78d7fd13e51519b3f9c3be223
     const template = `
     <div class="card">
         <div class="card-content">
@@ -106,11 +102,7 @@ function postTemplate(post) {
             <button id="${post.id}">Like</button>
            
             </br>
-<<<<<<< HEAD
-            <time datetime="2016-1-1">${date.toLocaleDateString()}</time>
-=======
             <time datetime="${date}">${date.toLocaleDateString()} at ${date.getHours()}:${date.getMinutes()}</time>
->>>>>>> 119c96a26afa1db78d7fd13e51519b3f9c3be223
             </div>
         </div>
     </div>
