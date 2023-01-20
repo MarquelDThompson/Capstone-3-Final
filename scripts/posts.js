@@ -111,6 +111,5 @@ function postTemplate(post) {
 }
 
 
-
 let allposts = new Posts()
 allposts.getPosts(1000 , 0)
