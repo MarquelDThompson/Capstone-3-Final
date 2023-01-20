@@ -30,7 +30,7 @@ fetch("https://microbloglite.herokuapp.com/api/users", requestOptions)
   .then(response => response.text())
   .then(result => 
     {
-        alert(result);
+        document.getElementById("popmessage").innerHTML = "user successfuly registered";
         console.log(result);
         window.location.href="login.html"
     }
