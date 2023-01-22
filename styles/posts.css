@@ -11,7 +11,6 @@ body {
 
 
 .card {
-
     margin: 30px  200px;
     background:white;
     border-style: solid;
@@ -22,8 +21,7 @@ body {
     text-indent:  12px;
     text-align: center;
     padding-bottom: 30px;
- 
-    
+    border-radius: 10px;
 }
 
 .subtitle.is-6{
@@ -53,7 +51,7 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 .button-1 {
-  background-color: rgb(29, 161, 242);
+  background-color: rgb(80, 88, 94);
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -77,6 +75,10 @@ a:active { text-decoration: none; }
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+.isLiked {
+    background-color: rgb(29, 161, 242) !important;
 }
 
 .button-1:hover,
