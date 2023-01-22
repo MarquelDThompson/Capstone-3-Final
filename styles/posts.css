@@ -30,10 +30,12 @@ body {
     font-weight: bolder ;
     font-size: 20px;
 }
+
 p{ 
     font-size: 20px;
     margin: 0 20px;
 }
+
 .button {
     background-color: #1DA1F2;
    
