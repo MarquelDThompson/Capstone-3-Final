@@ -2,6 +2,8 @@
 
 "use strict";
 
+/* Card for dsiplaying blog posts */
+
 function postTemplate() {
     return `
     <div class="card">
@@ -33,30 +35,36 @@ function postTemplate() {
 
 function createApost () {
 
+  // get the token from the getLoginData() function
   const token = getLoginData() 
+   // log the token to the console
   console.log(token.token)
+  // creates a new Headers object
   let myHeaders = new Headers();
+
   myHeaders.append("Authorization", "Bearer " + token.token);
   myHeaders.append("Content-Type", "application/json");
-
+  // creating a new object with the text from the element with id "postArea"
   let raw = JSON.stringify({
     text: document.getElementById("postArea").value,
   });
+
+   // loging the raw object to the console
   console.log(raw)
 
-
+  // creating a request options object to pass to the fetch function
   let requestOptions = {
     method: 'POST',
     headers: myHeaders,
     body: raw,
     redirect: 'follow'
   };
-
+ // making a post request to the specified URL
   fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-
+  // clearing the value of the "postArea" element after a post is submitted 
    document.getElementById("postArea").value=" ";
 }
 
