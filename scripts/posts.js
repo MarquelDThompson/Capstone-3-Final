@@ -72,44 +72,50 @@ class Post {
     unlike() {
         //todo
     }
-
-    numberOfLikes() {
-        // console.log(this.likes.length)
-        return this.likes.length
-    }
-
-    post() {
-        //todo
-    }
 }
 
 function postTemplate(post) {
-
     const date = new Date(post.createdAt)
-
-    const template = `
-    <div class="card">
-        <div class="card-content">
-            <div class="media-content">
-                <p class="title is-4"></p>
-                <p class="subtitle is-6">@${post.username}</p>
-            </div>
-            </div>
-
-            <div class="content">
-            <p>${post.text}</p>
-            <br>
-            <button id="${post.id}" class="button-1" role="button">Like</button>
-           
-            </br>
-            <time datetime="${date}">posted at ${date.toLocaleDateString()} at ${date.getHours()}:${date.getMinutes()}</time>
+        return`
+        <div class="card">
+            <div class="card-content">
+                <div class="media-content">
+                    <p class="title is-4"></p>
+                    <p class="subtitle is-6">@${post.username}</p>
+                </div>
+                </div>
+    
+                <div class="content">
+                <p>${post.text}</p>
+                <br>
+                <button id="${post.id}" class="button-1 isLiked" role="button">Like</button>
+                <p>${post.likes.length}</p>
+                </br>
+                <time datetime="${date}">${getDate(date)} </time>
+                </div>
             </div>
         </div>
-    </div>
-    `
-   return template
+        `
 }
 
+// function isLiked(likes) {
+//     for(let like of likes) {
+//         if(like)
+//     }
+// }
+
+function getDate(date){
+ 
+    const months = ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"]
+    let day = date.getDate()
+    let month = date.getMonth()
+    let Year = date.getFullYear()
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+
+    if(hours <= 12) {return `${months[month].toString()} ${day}, ${Year} at ${hours}:${minutes >= 10 ? minutes.toString() : "0" + minutes} a.m.`} 
+    else{ return  `${months[month]} ${day} at ${hours - 12}:${minutes >= 10 ? minutes.toString() : "0" + minutes} p.m` }
+}
 
 let allposts = new Posts()
 allposts.getPosts(1000 , 0)
