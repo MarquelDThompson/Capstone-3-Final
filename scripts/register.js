@@ -1,8 +1,9 @@
+// returns the element of specified id (RegisterForm).
 const form = document.getElementById('registertrationForm')
-
+// returns the Element object representing the element whose id property matches the specified string
 function registerUser(event) 
 {
- 
+// validation below if finished
 
 const usernameInput = document.getElementById('username').value;
 const fullnameInput = document.getElementById('fullname').value;
@@ -38,7 +39,4 @@ fetch("https://microbloglite.herokuapp.com/api/users", requestOptions)
 }
 form.addEventListener('submit',  registerUser)
 
-const usernameInput = document.getElementById('username').value;
-const fullnameInput = document.getElementById('fullname').value;
-const passwordInput = document.getElementById('password').value; 
 
