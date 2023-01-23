@@ -38,7 +38,4 @@ fetch("https://microbloglite.herokuapp.com/api/users", requestOptions)
 }
 form.addEventListener('submit',  registerUser)
 
-const usernameInput = document.getElementById('username').value;
-const fullnameInput = document.getElementById('fullname').value;
-const passwordInput = document.getElementById('password').value; 
 
