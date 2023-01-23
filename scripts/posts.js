@@ -98,12 +98,6 @@ function postTemplate(post) {
         `
 }
 
-// function isLiked(likes) {
-//     for(let like of likes) {
-//         if(like)
-//     }
-// }
-
 function getDate(date){
  
     const months = ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"]
