@@ -144,7 +144,7 @@ opacity: 1;
     right: 15px;
     
 }
-/* Logo CSS for Login*/
+/* container only for Logo Login*/
 .Crud-container{
     
    position: absolute;
@@ -165,7 +165,7 @@ opacity: 1;
 
 }
    
-/* Form below for reg*/
+/* Form below for Reg*/
 .form{
     width: 450px;
     height: 600px;
@@ -176,6 +176,7 @@ opacity: 1;
     border-radius: 10px;
     padding: 50px;
 }
+/* button for create on Reg */
 .create-newbutton a{
   color:white; 
   width: 55%;
